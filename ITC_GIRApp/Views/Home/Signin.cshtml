@@ -1,0 +1,95 @@
+<div class="container" id="divLogin">
+  <div class="row justify-content-center">
+
+    <div class="col-xl-12 col-lg-12 col-md-12">
+
+      <div class="card o-hidden border-0 shadow-lg">
+        <div class="card-body p-1">
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="p-5">
+                <div class="col-lg-12 mb-4 text-center" style="height: calc(1.5em + .75rem + 2px);">
+                  <img src="~/images/ITC.png" width="150" alt="Logo" class="center-block"/>
+                </div>
+
+                <form id="frmLogin" action="" method="get" class="user text-center" autocomplete="on">
+                  <div class="form-group">
+                    <input id="txtUsuario" type="text" name="username" class="form-control form-control-user" tabindex="1" autocomplete="off" placeholder="Usuario, NIT o Email"/>
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group" id="show_hide_password">
+                      <input id="txtContrasena" name="password" class="form-control form-control-user" type="password" tabindex="2" autocomplete="off" placeholder="Contraseña"/>
+                      <a id="aShowHidePassword" style="text-decoration: none; max-width: 40px; padding-top: 15px; height: 50px;" class="form-control input-group" href="#">
+                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                      </a>
+                      <div class="invalid-feedback"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <img id="imgCaptcha" width="150px" style="cursor: pointer;" alt="Click para generar un nuevo Captcha" />
+                  </div>
+
+                  <div class="form-group">
+                    <input type="text" id="txtCaptcha" name="captchaCode" class="form-control form-control-user" tabindex="3" autocomplete="off" placeholder="Captcha"/>
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="form-group d-none">
+                    <div class="custom-control custom-checkbox ">
+                      <input type="checkbox" class="custom-control-input" name="isFirstTime" id="chkIsFirstTime">
+                      <label class="custom-control-label font-weight-bold" for="chkIsFirstTime">Pertenezco a la compa&ntilde;&iacute;a (Primer inicio)</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" id="btnLogin" class="btn btn-primary btn-user btn-block"><i class="fas fa-user fa-fw"></i>&nbsp;Ingresar</button>
+                  </div>
+
+                  <hr />
+
+                  <div class="form-group">
+                    <a id="lblRecoverPassword" class="text-primary" title="Click para restablecer la contraseña">&iquest;Olvid&oacute; la contrase&ntilde;a?</a>
+                  </div>
+
+                  <div class="form-group">
+                    <a id="lblSignup" class="text-primary" title="Click para registrarse">Registrarse</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="text-center">
+                 <img alt="GIRApp" src="./images/GIRApp.png" class="img-fluid" style="max-width: 350px;margin-top:10px;" />
+              </div>
+              <div class="card border-left-warning shadow py-2" style="margin-right:50px;top:15px; bottom:100px; margin-left:50px;">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1" style="margin-left:25px;">Recomendaciones </div>
+                      <ul style="font-size: 75%; margin-right:5px;">
+                        <li>Su contrase&ntilde;a es personal e intransferible.</li>
+                        <li>Cambiar su contrase&ntilde;a peri&oacute;dicamente.</li>
+                        <li>Cerrar sesi&oacute;n al finalizar.</li>
+                      </ul>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-info fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

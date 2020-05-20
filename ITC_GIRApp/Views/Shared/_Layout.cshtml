@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="ITC.GIRApp" />
+  <meta name="author" content="Intelecto" />
+  <link rel="icon" href="~/images/GIRApp.png" />
+
+  <title>@ViewData["Title"] - ITC.GIRApp</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+  <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" href="~/lib/datatables/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="~/lib/Chart.js/Chart.min.css" />
+  <link rel="stylesheet" href="~/lib/sb-admin/sb-admin-2.min.css" />
+  <link rel="stylesheet" href="~/lib/select2/select2.min.css">
+  <link rel="stylesheet" href="~/lib/select2/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="~/styles/floating-labels.css" />
+  <link rel="stylesheet" href="~/styles/styles.css"/>
+</head>
+<body>
+  <script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="~/lib/jquery-easing/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="~/lib/select2/select2.min.js"></script>
+  <script type="text/javascript" src="~/lib/popper.js/popper.min.js"></script>
+  <script type="text/javascript" src="~/lib/sb-admin/sb-admin-2.min.js"></script>
+  <script type="text/javascript" src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="~/lib/datatables/js/jquery.dataTables.js?v=005"></script>
+  <script type="text/javascript" src="~/lib/datatables/js/dataTables.bootstrap4.min.js?v=005"></script>
+  <script type="text/javascript" src="~/lib/Chart.js/Chart.min.js"></script>
+  <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js"></script>
+  <script type="text/javascript" src="~/lib/read-excel-file/bundle/read-excel-file.min.js"></script>
+  <script type="text/javascript" src="~/js/util/ITC_Util.js?v=0.030"></script>
+  <script type="text/javascript" src="~/js/util/ITC_Charts.js?v=0.018"></script>
+  <script type="text/javascript" src="~/js/util/functions.js"></script>
+  <script type="text/javascript">
+  (() =>
+    $(function ()
+    {
+      $('[data-toggle="tooltip"]').tooltip();
+
+      $('select').each(function ()
+      {
+        $(this).select2({
+          theme: 'bootstrap4',
+          width: 'style',
+          placeholder: $(this).attr('placeholder'),
+          allowClear: Boolean($(this).data('allow-clear')),
+        });
+      });
+    }))();
+
+    $.validator.addMethod("notEqualTo", function(value, element, param)
+    {
+        return this.optional(element) || value != param;
+    },"Please enter a diferent value.");
+  </script>
+  <div class="user-select-none">
+    @RenderBody()
+  </div>
+  @RenderSection("Scripts", required: false)
+</body>
+</html>

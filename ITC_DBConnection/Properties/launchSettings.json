@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ITC_DBConnection": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

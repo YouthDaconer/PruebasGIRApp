@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITC_GIRApp", "ITC_GIRApp\ITC_GIRApp.csproj", "{30A61207-3EF4-4D62-A3A5-97DA4D347EA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITC_DBConnection", "ITC_DBConnection\ITC_DBConnection.csproj", "{092EB90E-533E-46FD-BFC4-F4D95305EB65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30A61207-3EF4-4D62-A3A5-97DA4D347EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A61207-3EF4-4D62-A3A5-97DA4D347EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A61207-3EF4-4D62-A3A5-97DA4D347EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A61207-3EF4-4D62-A3A5-97DA4D347EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{092EB90E-533E-46FD-BFC4-F4D95305EB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{092EB90E-533E-46FD-BFC4-F4D95305EB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{092EB90E-533E-46FD-BFC4-F4D95305EB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{092EB90E-533E-46FD-BFC4-F4D95305EB65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BB0EBB-18E7-4E0A-AD0D-20950118C6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BB0EBB-18E7-4E0A-AD0D-20950118C6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BB0EBB-18E7-4E0A-AD0D-20950118C6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BB0EBB-18E7-4E0A-AD0D-20950118C6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {314AED64-1508-4398-A0CF-398817955804}
+	EndGlobalSection
+EndGlobal

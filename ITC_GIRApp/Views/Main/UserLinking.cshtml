@@ -1,0 +1,91 @@
+<div class="card shadow optionMenu" id="divUserLinking" style="display: none;">
+
+  <a href="#divTabUserLinking" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardTable">
+    <h6 class="m-0 font-weight-bold text-primary">Crear usuario</h6>
+  </a>
+
+  <div class="collapse show" id="divTabUserLinking">
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-xl-12 col-md-12">
+          <form id="frmRegister" class="form-control-user" autocomplete="off" action="">
+
+            <div class="form-row">
+              <div class="form-group col-xl-12 mb-6">
+                <label>Cuenta de usuario</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="sAMAccountName" id="txtSAMAccountName">
+                  <div class="input-group-append">
+                   <button class="btn btn-primary btn-user btn-block" type="button" id="btnValidateSAMAccountName">Validar</button>
+                  </div>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group  col-xl-6 mb-6 d-none">
+                <label>Raz&oacute;n Social</label>
+                <input type="text" class="form-control" id="txtBusinessName" name="businessName" readonly disabled value="   ">
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group col-xl-6 mb-6 d-none">
+                <label>NIT</label>
+                <input type="number" class="form-control" id="txtDocumentNumber" name="documentNumber" data-toggle="tooltip" data-placement="top" title="Ingresa el NIT sin dígito de verificación" readonly disabled value="0"/>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-xl-6 mb-6">
+                <label>Nombre del contacto</label>
+                <input type="text" class="form-control" id="txtContactName" name="contactName" readonly disabled>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group col-xl-6 mb-6">
+                <label>N&uacute;mero de celular</label>
+                <input type="text" class="form-control" id="txtMobile" name="mobile" readonly disabled/>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-xl-6 mb-6">
+                <label id="lblEmail">Correo electr&oacute;nico</label>
+                <input type="email" class="form-control" id="txtEmail" name="email" readonly disabled>
+                <div class="invalid-feedback"></div>
+              </div>
+
+               <div class="form-group col-xl-6 mb-6">
+                <label>Rol</label>
+                <select id="slcRole" class="form-control" name="role" readonly disabled>
+                  <option value="" disabled>Seleccione</option>
+                </select>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+            <div class="form-row d-none">
+              <div class="form-group col-xl-6 mb-6">
+                <label>Regi&oacute;n</label>
+                <select id="slcRegion" class="form-control" name="region" readonly disabled>
+                  <option disabled>Seleccione</option>
+                </select>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+            <br/>
+
+            <button type="submit" id="btnCreate" class="btn btn-secondary btn-user btn-block" disabled><i class="fas fa-user-plus fa-fw"></i>&nbsp;Crear Usuario</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="~/js/Main/userLinking.js?v=010"></script>

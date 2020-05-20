@@ -1,0 +1,13 @@
+root = true
+
+[*]
+end_of_line = crlf
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+[*.{cs,js,ts}]
+indent_size = 4
+
+[*.xml]
+indent_style = space

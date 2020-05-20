@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>e4fe9386-d2c8-469e-93b0-93d97b43b0c1</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\style\**" />
+    <Content Remove="wwwroot\style\**" />
+    <EmbeddedResource Remove="wwwroot\style\**" />
+    <None Remove="wwwroot\style\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="4.5.3.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\js\vendor\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ITC_DBConnection\ITC_DBConnection.csproj" />
+  </ItemGroup>
+
+</Project>

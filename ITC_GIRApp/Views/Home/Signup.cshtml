@@ -1,0 +1,133 @@
+<div class="container py-4 d-none" id="divRegister">
+  <div class="row">
+    <div class="col-xl-4 col-md-4 px-0">
+      <div class="signup-picture rounded-left shadow"></div>
+    </div>
+    <div class="col-xl-8 col-md-8 px-0">
+      <div class="card shadow py-2 rounded-right" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Registrarse</div>
+              <small id="smallContent">Para registrarse debe llenar los siguientes campos.</small>
+              <br>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="p-4">
+                    <form id="frmRegister" class="form-control-user" autocomplete="off" action="">
+
+                      <div class="form-row">
+                        <div class="form-group  col-xl-6 mb-6">
+                          <label>Raz&oacute;n Social</label>
+                          <input type="text" class="form-control" id="txtBusinessName" name="businessName">
+                          <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="form-group col-xl-6 mb-6">
+                          <label>NIT</label>
+                          <input type="number" class="form-control" id="txtDocumentNumber" name="documentNumber" data-toggle="tooltip" data-placement="top" title="Ingresa el NIT sin digito de verificación"/>
+                          <div class="invalid-feedback"></div>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-xl-6 mb-6">
+                          <label>Nombre del contacto</label>
+                          <input type="text" class="form-control" id="txtContactName" name="contactName">
+                          <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="form-group col-xl-6 mb-6">
+                          <label>N&uacute;mero de celular</label>
+                          <input type="text" class="form-control" id="txtMobile" name="mobile"/>
+                          <div class="invalid-feedback"></div>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-xl-12 mb-6">
+                          <label id="lblEmail">Correo electr&oacute;nico</label>
+                          <div class="input-group">
+                            <input type="email" class="form-control" id="txtEmail" name="email" onchange="validateMail();">
+                            <div class="invalid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Contrase&ntilde;a</label>
+                        <div class="input-group" id="show_hide_password2">
+                          <input class="form-control" type="password" name="password2" id="txtContrasena2" autocomplete="off"  data-toggle="tooltip" data-placement="top" title="La contraseña debe cumplir con las políticas establecidas. (Mínimo 14 caracteres/No puede contener el NIT)">
+                          <div class="form-control input-group" style="max-width: 40px;">
+                            <a id="aShowHidePassword2" href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                          </div>
+                          <div class="invalid-feedback"></div>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-xl-12 mb-6">
+                          <label>Regi&oacute;n</label>
+                          <select id="slcRegion" class="form-control" name="region" readonly>
+                            <option disabled>Seleccione</option>
+                          </select>
+                          <div class="invalid-feedback"></div>
+                        </div>
+                      </div>
+
+                      <div class="form-group form-row text-center">
+                        <div class="col-sm-12 mb-12 mb-sm-12">
+                          <div class="custom-control custom-checkbox ">
+                            <input type="checkbox" class="custom-control-input" name="agree" id="chkAcceptTermsConditions">
+                            <label class="custom-control-label font-weight-bold" for="chkAcceptTermsConditions">Acepta t&eacute;rminos y condiciones</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="submit" id="btnSignup" class="btn btn-primary btn-user btn-block" disabled><i class="fas fa-user-plus fa-fw"></i>&nbsp;Crear Usuario</button>
+                    </form>
+                    <hr>
+                    <div class="form-group text-center">
+                      <span>&iquest;Ya tienes una cuenta?&nbsp;<a id="lblLogin" title="Click para ingresar" style="color : #00afef">Ingresa</a></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Codigo de recuperacion -->
+<div class="modal" id="modalSendMailCode" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">C&oacute;digo de verificaci&oacute;n</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Hemos enviado un c&oacute;digo de verificaci&oacute;n a tu correo electr&oacute;nico, por favor ingresalo: </p>
+        <p style="display: none;" class="text-danger mb-4" id="codeEmailError">El código no coincide</p>
+        <form id="frmSendMailCode" class="form-control-user" autocomplete="off" action="">
+          <div class="form-row">
+            <div class="form-group col-xl-12 mb-6">
+              <label>C&oacute;digo</label>
+              <input type="text" class="form-control" id="txtMailCode" name="code">
+              <div class="invalid-feedback"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="btnSendMailCode" type="button" class="btn btn-primary">Verificar</button>
+        <button id="btnCloseSendMailCodeModal" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

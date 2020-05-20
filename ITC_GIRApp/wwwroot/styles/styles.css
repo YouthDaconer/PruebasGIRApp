@@ -1,0 +1,45 @@
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.custom-file-input:lang(es)~.custom-file-label::after {
+    content: "Buscar"
+}
+
+.index-0
+{
+  z-index: 0;
+}
+
+.user-select-none
+{
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.user-select-text
+{
+  user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  -webkit-user-select: text;
+}
