@@ -132,7 +132,12 @@ namespace ITC_GIRApp.Controllers
                 string strTipo = objRequestParams["Tipo"].ToString();
                 string strDescripcion = objRequestParams["Descripcion"].ToString();
                 string strPeso = objRequestParams["Peso"].ToString();
-                string strDepartamento = objRequestParams["departamentoId"].ToString();
+                string strDepartamento = null;
+
+                if (objRequestParams["departamentoId"] != null)
+                {
+                    strDepartamento = objRequestParams["departamentoId"].ToString();
+                }
 
                 //Conectar BD
                 Connection objConnection = new Connection(Config.SQLPass, Config.Server, Config.DBName, Config.SQLUser);
@@ -267,7 +272,12 @@ namespace ITC_GIRApp.Controllers
                 string strTipo = objRequestParams["Tipo"].ToString();
                 string strDescripcion = objRequestParams["Descripcion"].ToString();
                 string nuPeso = objRequestParams["Peso"].ToString();
-                string strDepartamento = objRequestParams["departamentoId"].ToString();
+                string strDepartamento = null;
+
+                if (objRequestParams["departamentoId"] != null)
+                {
+                    strDepartamento = objRequestParams["departamentoId"].ToString();
+                }
 
                 //Conectar BD
                 Connection objConnection = new Connection(Config.SQLPass, Config.Server, Config.DBName, Config.SQLUser);
